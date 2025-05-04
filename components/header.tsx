@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ColorThemeSwitcher } from "@/components/color-theme-switcher"
@@ -45,8 +46,11 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between py-4">
         <div className="flex items-center gap-2">
           <Link href="/" className="text-xl font-bold flex items-center">
-            <span className="text-primary mr-1">Mi</span>Empresa
+       {/*      <span className="text-primary mr-1">Mi</span>Empresa */}
+          <Image src={'/logo/logo.png'} width={100} height={50} alt="Logo" className="" />
+
           </Link>
+
         </div>
         <nav className="hidden md:flex gap-8">
           <Link href="/" className="text-sm font-medium transition-colors hover:text-primary relative group">
@@ -67,10 +71,10 @@ export default function Header() {
           </Link>
         </nav>
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="icon" className="hidden sm:flex">
+          {/* <Button variant="ghost" size="icon" className="hidden sm:flex">
             <Search className="h-5 w-5" />
             <span className="sr-only">Buscar</span>
-          </Button>
+          </Button> */}
           {/* <Button variant="ghost" size="icon" className="relative">
             <ShoppingCart className="h-5 w-5" />
             <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-medium text-primary-foreground">

@@ -1,10 +1,11 @@
 import Link from "next/link"
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { businessData } from "@/data/business"
+import Image from "next/image"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-
   const socialLinks = [
     { icon: <Facebook className="h-5 w-5" />, href: "https://facebook.com", label: "Facebook" },
     { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com", label: "Twitter" },
@@ -49,7 +50,7 @@ export default function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <Link href="/" className="text-2xl font-bold">
-                MiEmpresa
+                <Image src={'/logo/logo.png'} width={100} height={50} alt="Logo" className="" />
               </Link>
               <p className="mt-4 text-muted-foreground">
                 Ofreciendo productos de calidad desde 2010. Nuestra misión es proporcionar soluciones innovadoras y
@@ -99,7 +100,7 @@ export default function Footer() {
             </div>
 
             {/* Legal */}
-            <div>
+          {/*   <div>
               <h3 className="text-lg font-semibold">Legal</h3>
               <ul className="mt-4 space-y-3">
                 <li>
@@ -123,7 +124,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Contact */}
             <div>
@@ -158,16 +159,16 @@ export default function Footer() {
       <div className="border-t">
         <div className="container flex flex-col items-center justify-between gap-4 py-6 md:flex-row">
           <p className="text-center text-sm text-muted-foreground">
-            &copy; {currentYear} MiEmpresa. Todos los derechos reservados.
+            &copy; {currentYear} {businessData.name}. Todos los derechos reservados.
           </p>
           <div className="flex items-center space-x-4">
             <Link href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">
               Mapa del Sitio
             </Link>
-            <span className="text-muted-foreground">|</span>
+           {/*  <span className="text-muted-foreground">|</span>
             <Link href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">
               Accesibilidad
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ThemeCustomizer } from "@/components/theme-customizer"
 import { ArrowRight, CheckCircle, ChevronRight } from "lucide-react"
+import { businessData } from "@/data/business"
 
 export default function HomePage() {
   return (
@@ -13,13 +14,13 @@ export default function HomePage() {
         <div className="container relative px-4 md:px-6">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
             <div className="flex flex-col justify-center space-y-5">
-              <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm text-primary">
+             {/*  <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm text-primary">
                 <span className="font-medium">Nuevo lanzamiento</span>
                 <ChevronRight className="ml-1 h-3.5 w-3.5" />
-              </div>
+              </div> */}
               <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Soluciones de <span className="text-primary">Calidad</span> para tu Negocio
+                 {businessData.name.toLocaleUpperCase()} soluciones de <span className="text-primary">Calidad</span> para tu Hogar.
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   Ofrecemos los mejores productos con la más alta calidad para satisfacer todas tus necesidades
@@ -56,25 +57,25 @@ export default function HomePage() {
             </div>
             <div className="flex items-center justify-center lg:justify-end">
               <div className="relative">
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/20 to-primary/40 opacity-75 blur-xl"></div>
-                <div className="relative overflow-hidden rounded-2xl border bg-background p-2 shadow-xl">
+               {/*  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/20 to-primary/40 opacity-75 blur-xl"></div>
+                */} <div className="relative overflow-hidden rounded-2xl border bg-background p-2 shadow-xl">
                   <Image
                     src="/placeholder.svg?height=550&width=550"
-                    width={550}
-                    height={550}
+                    width={330}
+                    height={330}
                     alt="Hero Image"
                     className="rounded-xl object-cover"
                     priority
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-primary/20 backdrop-blur-md"></div>
+               {/*  <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-primary/20 backdrop-blur-md"></div>
                 <div className="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-primary/30 backdrop-blur-md"></div>
-              </div>
+               */}</div>
             </div>
           </div>
 
           {/* Logos de marcas */}
-          <div className="mt-16 border-t pt-8">
+          {/* <div className="mt-16 border-t pt-8">
             <p className="mb-4 text-center text-sm text-muted-foreground">CONFÍAN EN NOSOTROS</p>
             <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
               {[1, 2, 3, 4, 5].map((i) => (
@@ -88,7 +89,7 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -186,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* Sección de estadísticas */}
-      <section className="w-full bg-primary/5 py-16">
+    {/*   <section className="w-full bg-primary/5 py-16">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="flex flex-col items-center justify-center text-center">
@@ -207,7 +208,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="w-full py-16 md:py-24">

@@ -4,7 +4,8 @@ import { useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { X, Home, Users, ShoppingBag, Mail, ShoppingCart, Search, Phone } from "lucide-react"
-
+import { businessData } from "@/data/business"
+import Image from "next/image"
 interface MobileMenuProps {
   isOpen: boolean
   onClose: () => void
@@ -52,7 +53,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="p-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-bold" onClick={onClose}>
-              <span className="text-primary">Mi</span>Empresa
+  {/*             <span className="text-primary">Mi</span>Empresa */}
+              <Image src={'/logo/logo.png'} width={100} height={50} alt="Logo" className="" />
             </Link>
             <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full hover:bg-primary/10">
               <X className="h-6 w-6" />
@@ -60,17 +62,17 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </Button>
           </div>
 
-          <div className="mt-6 flex items-center justify-between border-b pb-4">
+       {/*    <div className="mt-6 flex items-center justify-between border-b pb-4">
             <Button variant="ghost" size="sm" className="w-full justify-start gap-2 px-2">
               <Search className="h-4 w-4" />
               <span>Buscar</span>
             </Button>
-           {/*  <Button variant="ghost" size="sm" className="w-full justify-start gap-2 px-2">
+            <Button variant="ghost" size="sm" className="w-full justify-start gap-2 px-2">
               <ShoppingCart className="h-4 w-4" />
               <span>Carrito (3)</span>
-            </Button> */}
+            </Button>
           </div>
-
+ */}
           <div className="mt-8 flex flex-col space-y-1">
             {menuItems.map((item, index) => (
               <div key={item.href}>
@@ -102,7 +104,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </div> */}
 
           <div className="mt-8 text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} MiEmpresa
+            &copy; {new Date().getFullYear()} {businessData.name}. Todos los derechos reservados.
           </div>
         </div>
       </div>

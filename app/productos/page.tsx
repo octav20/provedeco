@@ -185,9 +185,9 @@ export default function ProductosPage() {
         </div>
 
         {/* Banner promocional */}
-        <div className="my-12">
+      {/*   <div className="my-12">
           <PromoBanner />
-        </div>
+        </div> */}
 
         {/* Productos */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
@@ -276,7 +276,7 @@ export default function ProductosPage() {
         </div>
 
         {/* Paginación */}
-        {filteredProducts.length > 0 && (
+       {/*  {filteredProducts.length > 0 && (
           <div className="flex justify-center gap-2 mt-12">
             <Button variant="outline" size="icon">
               <svg
@@ -322,7 +322,7 @@ export default function ProductosPage() {
               <span className="sr-only">Siguiente</span>
             </Button>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   )

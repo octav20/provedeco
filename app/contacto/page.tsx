@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { sellersData } from "@/data/sellers"
 
 export default function ContactoPage() {
   const socialNetworks = [
@@ -43,7 +44,7 @@ export default function ContactoPage() {
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Contáctanos</h1>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros.
+              No dudes en ponerte en contacto con alguno de nuestros vendedores.
             </p>
           </div>
         </div>
@@ -54,7 +55,7 @@ export default function ContactoPage() {
               <CardContent className="p-0">
                 <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4307.03039314846!2d-107.38586456323875!3d24.80345580460266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bcd0b2e05fa1b5%3A0x3ad749767126663c!2sPanteon%20Civil!5e0!3m2!1ses!2smx!4v1746394578332!5m2!1ses!2smx"
                     width="100%"
                     height="100%"
                     style={{ border: 0, aspectRatio: "16/9" }}
@@ -63,12 +64,12 @@ export default function ContactoPage() {
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Ubicación de la empresa"
                   ></iframe>
-                </div>
+                  </div>
               </CardContent>
             </Card>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
+              {/* <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex flex-col items-center text-center space-y-3">
                     <div className="rounded-full bg-primary/10 p-3">
@@ -80,22 +81,22 @@ export default function ContactoPage() {
                     </a>
                   </div>
                 </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex flex-col items-center text-center space-y-3">
-                    <div className="rounded-full bg-primary/10 p-3">
-                      <Phone className="h-6 w-6 text-primary" />
+              </Card> */}
+              {sellersData.map((seller) => (
+                <Card key={seller.id} className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col items-center text-center space-y-3">
+                      <div className="rounded-full bg-primary/10 p-3">
+                        <Phone className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold">Telefono {seller.name} Provedeco</h3>
+                      <a href={`tel:${seller.number}`} className="text-primary hover:underline transition-all">
+                        {seller.number}
+                      </a>
                     </div>
-                    <h3 className="text-xl font-bold">Teléfono</h3>
-                    <a href="tel:+34123456789" className="text-primary hover:underline transition-all">
-                      +34 123 456 789
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-
+                  </CardContent>
+                </Card>
+              ))}
               <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex flex-col items-center text-center space-y-3">
@@ -135,21 +136,22 @@ export default function ContactoPage() {
                   </div>
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-                    {socialNetworks.map((social) => (
+                    {sellersData.map((seller) => (
                       <a
-                        key={social.name}
-                        href={social.url}
+                        key={seller.name}
+                        href={seller.facebookPage}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex flex-col items-center justify-center rounded-lg p-4 transition-all duration-300 ${social.color}`}
+                        className={`flex flex-col items-center justify-center rounded-lg p-4 transition-all duration-300 bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2] hover:text-white `}
                       >
-                        {social.icon}
-                        <span className="mt-2 text-sm font-medium">{social.name}</span>
+                       {/*  {social.icon} */}
+                       <Facebook className="h-6 w-6" />
+                        <span className="mt-2 text-sm font-medium">{seller.name} Provedeco</span>
                       </a>
                     ))}
                   </div>
 
-                  <div className="space-y-4 pt-6 border-t">
+                {/*   <div className="space-y-4 pt-6 border-t">
                     <h3 className="text-xl font-bold text-center">¿Prefieres enviarnos un mensaje directo?</h3>
                     <div className="flex justify-center">
                       <Button size="lg" className="w-full sm:w-auto">
@@ -157,12 +159,12 @@ export default function ContactoPage() {
                         Enviar Email
                       </Button>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-none shadow-lg">
+           {/*  <Card className="overflow-hidden border-none shadow-lg">
               <CardContent className="p-8">
                 <div className="space-y-4">
                   <div className="space-y-2">
@@ -216,7 +218,7 @@ export default function ContactoPage() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>
