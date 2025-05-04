@@ -22,14 +22,14 @@ interface ProductDetailModalProps {
     name: string
     price: number
     discountPrice?: number
-    rating: number
+    rating?: number
     description: string
     category: string
-    tags: string[]
+    tags?: string[]
     isNew?: boolean
     isFeatured?: boolean
     isOnSale?: boolean
-    stock: number
+    stock?: number
     images: string[]
   }
 }
@@ -43,9 +43,9 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
   const colors = ["Negro", "Blanco", "Azul", "Rojo"]
   const sizes = ["XS", "S", "M", "L", "XL"]
 
-  const incrementQuantity = () => setQuantity((prev) => (prev < product.stock ? prev + 1 : prev))
+/*   const incrementQuantity = () =>product.stock? setQuantity((prev) => (prev < product.stock ? prev + 1 : prev)): setQuantity((prev) => prev + 1)
   const decrementQuantity = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1))
-
+ */
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % product.images.length)
   }
@@ -153,7 +153,7 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
             <div>
               <div className="flex items-start justify-between">
                 <h3 className="text-2xl font-bold">{product.name}</h3>
-                <div className="flex gap-1">
+                {/* <div className="flex gap-1">
                   <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full">
                     <Heart className="h-4 w-4" />
                     <span className="sr-only">Añadir a favoritos</span>
@@ -162,9 +162,9 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
                     <Share2 className="h-4 w-4" />
                     <span className="sr-only">Compartir</span>
                   </Button>
-                </div>
+                </div> */}
               </div>
-              <div className="mt-2">{renderRatingStars(product.rating)}</div>
+           {/*    <div className="mt-2">{renderRatingStars(product.rating)}</div> */}
               <div className="mt-4 flex items-baseline gap-2">
                 {product.discountPrice ? (
                   <>
@@ -181,7 +181,7 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
               <p className="mt-2 text-sm text-muted-foreground">Impuestos incluidos. Envío calculado en el checkout.</p>
             </div>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div>
                 <label className="text-sm font-medium">Color</label>
                 <div className="mt-2 flex flex-wrap gap-2">
@@ -237,9 +237,9 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
                       : "Producto agotado"}
                 </p>
               </div>
-            </div>
+            </div> */}
 
-            <div className="flex flex-col gap-2 sm:flex-row">
+         {/*    <div className="flex flex-col gap-2 sm:flex-row">
               <Button className="flex-1" size="lg" disabled={product.stock === 0}>
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Añadir al Carrito
@@ -248,26 +248,26 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
                 <Heart className="mr-2 h-5 w-5" />
                 Añadir a Favoritos
               </Button>
-            </div>
+            </div> */}
 
             <div className="space-y-2 border-t pt-4">
               <div className="flex items-center gap-2">
                 <span className="text-sm font-medium">Categoría:</span>
                 <Badge variant="secondary">{product.category}</Badge>
               </div>
-              <div className="flex flex-wrap items-center gap-2">
+              {/* <div className="flex flex-wrap items-center gap-2">
                 <span className="text-sm font-medium">Etiquetas:</span>
                 {product.tags.map((tag) => (
                   <Badge key={tag} variant="outline">
                     {tag}
                   </Badge>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
 
-        <Tabs defaultValue="descripcion" className="mt-6">
+       {/*  <Tabs defaultValue="descripcion" className="mt-6">
           <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="descripcion">Descripción</TabsTrigger>
             <TabsTrigger value="especificaciones">Especificaciones</TabsTrigger>
@@ -338,7 +338,7 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
               ))}
             </div>
           </TabsContent>
-        </Tabs>
+        </Tabs> */}
       </DialogContent>
     </Dialog>
   )

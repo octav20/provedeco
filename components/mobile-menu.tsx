@@ -65,10 +65,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <Search className="h-4 w-4" />
               <span>Buscar</span>
             </Button>
-            <Button variant="ghost" size="sm" className="w-full justify-start gap-2 px-2">
+           {/*  <Button variant="ghost" size="sm" className="w-full justify-start gap-2 px-2">
               <ShoppingCart className="h-4 w-4" />
               <span>Carrito (3)</span>
-            </Button>
+            </Button> */}
           </div>
 
           <div className="mt-8 flex flex-col space-y-1">
@@ -76,7 +76,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <div key={item.href}>
                 <Link
                   href={item.href}
-                  className="flex items-center gap-3 rounded-lg px-3 py-4 text-lg font-medium transition-all hover:bg-primary/10 hover:text-primary active:scale-95"
+                  className="flex items-center  gap-3 rounded-lg px-3 py-4 text-lg font-medium transition-all hover:bg-primary/15 hover:text-primary active:scale-95"
                   onClick={onClose}
                 >
                   <span className="text-primary">{item.icon}</span>
@@ -86,7 +86,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             ))}
           </div>
 
-          <div className="mt-8 border-t pt-6">
+        {/*   <div className="mt-8 border-t pt-6">
             <div className="rounded-lg bg-muted p-4">
               <h3 className="font-medium">¿Necesitas ayuda?</h3>
               <p className="mt-2 text-sm text-muted-foreground">
@@ -99,7 +99,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-8 text-center text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} MiEmpresa

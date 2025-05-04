@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-background to-muted">
       {/* Newsletter Section */}
-      <div className="container py-12">
+      {/* <div className="container py-12">
         <div className="rounded-xl bg-primary/5 p-6 md:p-8 lg:p-10">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div className="max-w-md">
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
+ */}
       {/* Main Footer */}
       <div className="border-t">
         <div className="container py-12">

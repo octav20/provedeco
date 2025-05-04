@@ -39,9 +39,8 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md border-b shadow-sm" : "bg-transparent"
-      }`}
+      className={`sticky top-0 z-40 w-full transition-all duration-300 bg-background/95 border-b 
+      `}
     >
       <div className="container flex h-16 items-center justify-between py-4">
         <div className="flex items-center gap-2">
@@ -72,13 +71,13 @@ export default function Header() {
             <Search className="h-5 w-5" />
             <span className="sr-only">Buscar</span>
           </Button>
-          <Button variant="ghost" size="icon" className="relative">
+          {/* <Button variant="ghost" size="icon" className="relative">
             <ShoppingCart className="h-5 w-5" />
             <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-medium text-primary-foreground">
               3
             </span>
             <span className="sr-only">Carrito</span>
-          </Button>
+          </Button> */}
           <Link href="/contacto" className="hidden md:block">
             <Button
               size="sm"
@@ -89,7 +88,7 @@ export default function Header() {
             </Button>
           </Link>
           <ThemeToggle />
-          <ColorThemeSwitcher />
+         {/*  <ColorThemeSwitcher /> */}
           <Button variant="outline" size="icon" className="md:hidden" onClick={toggleMenu}>
             <Menu className="h-5 w-5" />
             <span className="sr-only">Abrir menú</span>

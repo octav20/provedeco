@@ -12,6 +12,7 @@ import ProductDetailModal from "@/components/product-detail-modal"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { motion } from "framer-motion"
+import { products } from "@/data/products"
 
 // Tipos
 type Category = {
@@ -25,218 +26,30 @@ type Product = {
   description: string
   price: number
   discountPrice?: number
-  rating: number
+  dimensions?: string
+  rating?: number
   category: string
-  tags: string[]
+  tags?: string[]
   isNew?: boolean
   isFeatured?: boolean
   isOnSale?: boolean
-  stock: number
+  stock?: number
   images: string[]
+  boxPrice?: number
+boxQuantity?: number
 }
 
 export default function ProductosPage() {
   // Categorías
   const categories: Category[] = [
     { id: "all", name: "Todos" },
-    { id: "electronics", name: "Electrónica" },
-    { id: "clothing", name: "Ropa" },
-    { id: "home", name: "Hogar" },
-    { id: "sports", name: "Deportes" },
-    { id: "beauty", name: "Belleza" },
+    {id: "placas", name: "Placas"},
+    {id:'lambrin', name: "Lambrin"},
+    {id:'piedras', name: "Piedras"},
   ]
 
   // Datos de ejemplo para los productos
-  const allProducts: Product[] = [
-    {
-      id: 1,
-      name: "Smartphone Premium",
-      description: "El último smartphone con cámara de alta resolución y batería de larga duración.",
-      price: 899.99,
-      discountPrice: 799.99,
-      rating: 4.8,
-      category: "electronics",
-      tags: ["smartphone", "tech", "gadget"],
-      isNew: true,
-      isFeatured: true,
-      stock: 15,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Smartphone+1",
-        "/placeholder.svg?height=300&width=300&text=Smartphone+2",
-        "/placeholder.svg?height=300&width=300&text=Smartphone+3",
-      ],
-    },
-    {
-      id: 2,
-      name: "Laptop Ultradelgada",
-      description: "Potente laptop con procesador de última generación y diseño ultradelgado.",
-      price: 1299.99,
-      rating: 4.7,
-      category: "electronics",
-      tags: ["laptop", "tech", "computer"],
-      isFeatured: true,
-      stock: 8,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Laptop+1",
-        "/placeholder.svg?height=300&width=300&text=Laptop+2",
-      ],
-    },
-    {
-      id: 3,
-      name: "Auriculares Inalámbricos",
-      description: "Auriculares con cancelación de ruido y sonido de alta fidelidad.",
-      price: 199.99,
-      discountPrice: 149.99,
-      rating: 4.5,
-      category: "electronics",
-      tags: ["audio", "tech", "wireless"],
-      isOnSale: true,
-      stock: 25,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Auriculares+1",
-        "/placeholder.svg?height=300&width=300&text=Auriculares+2",
-        "/placeholder.svg?height=300&width=300&text=Auriculares+3",
-      ],
-    },
-    {
-      id: 4,
-      name: "Camiseta Premium",
-      description: "Camiseta de algodón 100% con diseño exclusivo y alta durabilidad.",
-      price: 29.99,
-      rating: 4.3,
-      category: "clothing",
-      tags: ["fashion", "casual", "summer"],
-      stock: 50,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Camiseta+1",
-        "/placeholder.svg?height=300&width=300&text=Camiseta+2",
-      ],
-    },
-    {
-      id: 5,
-      name: "Zapatillas Deportivas",
-      description: "Zapatillas con tecnología avanzada para máximo rendimiento y comodidad.",
-      price: 119.99,
-      discountPrice: 89.99,
-      rating: 4.6,
-      category: "clothing",
-      tags: ["shoes", "sports", "running"],
-      isOnSale: true,
-      stock: 12,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Zapatillas+1",
-        "/placeholder.svg?height=300&width=300&text=Zapatillas+2",
-        "/placeholder.svg?height=300&width=300&text=Zapatillas+3",
-      ],
-    },
-    {
-      id: 6,
-      name: "Chaqueta Impermeable",
-      description: "Chaqueta resistente al agua con forro térmico para climas fríos.",
-      price: 149.99,
-      rating: 4.4,
-      category: "clothing",
-      tags: ["jacket", "winter", "outdoor"],
-      stock: 18,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Chaqueta+1",
-        "/placeholder.svg?height=300&width=300&text=Chaqueta+2",
-      ],
-    },
-    {
-      id: 7,
-      name: "Lámpara de Diseño",
-      description: "Lámpara moderna con iluminación LED ajustable y diseño minimalista.",
-      price: 79.99,
-      rating: 4.2,
-      category: "home",
-      tags: ["lighting", "decoration", "modern"],
-      stock: 30,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Lámpara+1",
-        "/placeholder.svg?height=300&width=300&text=Lámpara+2",
-      ],
-    },
-    {
-      id: 8,
-      name: "Juego de Sartenes",
-      description: "Set de sartenes antiadherentes de alta calidad con mangos ergonómicos.",
-      price: 129.99,
-      discountPrice: 99.99,
-      rating: 4.7,
-      category: "home",
-      tags: ["kitchen", "cooking", "home"],
-      isOnSale: true,
-      stock: 15,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Sartenes+1",
-        "/placeholder.svg?height=300&width=300&text=Sartenes+2",
-        "/placeholder.svg?height=300&width=300&text=Sartenes+3",
-      ],
-    },
-    {
-      id: 9,
-      name: "Sofá Modular",
-      description: "Sofá con diseño modular que se adapta a cualquier espacio y estilo.",
-      price: 899.99,
-      rating: 4.5,
-      category: "home",
-      tags: ["furniture", "living room", "comfort"],
-      isFeatured: true,
-      stock: 5,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Sofá+1",
-        "/placeholder.svg?height=300&width=300&text=Sofá+2",
-      ],
-    },
-    {
-      id: 10,
-      name: "Bicicleta de Montaña",
-      description: "Bicicleta resistente con suspensión avanzada para terrenos difíciles.",
-      price: 599.99,
-      discountPrice: 499.99,
-      rating: 4.8,
-      category: "sports",
-      tags: ["bike", "outdoor", "adventure"],
-      isNew: true,
-      stock: 7,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Bicicleta+1",
-        "/placeholder.svg?height=300&width=300&text=Bicicleta+2",
-        "/placeholder.svg?height=300&width=300&text=Bicicleta+3",
-      ],
-    },
-    {
-      id: 11,
-      name: "Set de Yoga",
-      description: "Kit completo para yoga con esterilla, bloques y correa de alta calidad.",
-      price: 49.99,
-      rating: 4.3,
-      category: "sports",
-      tags: ["yoga", "fitness", "wellness"],
-      stock: 22,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Yoga+1",
-        "/placeholder.svg?height=300&width=300&text=Yoga+2",
-      ],
-    },
-    {
-      id: 12,
-      name: "Crema Hidratante",
-      description: "Crema facial con ingredientes naturales para una hidratación profunda.",
-      price: 24.99,
-      rating: 4.6,
-      category: "beauty",
-      tags: ["skincare", "facial", "natural"],
-      isNew: true,
-      stock: 40,
-      images: [
-        "/placeholder.svg?height=300&width=300&text=Crema+1",
-        "/placeholder.svg?height=300&width=300&text=Crema+2",
-      ],
-    },
-  ]
-
+  const allProducts: Product[] = products
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(allProducts)
   const [searchQuery, setSearchQuery] = useState<string>("")
@@ -252,7 +65,7 @@ export default function ProductosPage() {
     }
 
     // Filtrar por búsqueda
-    if (searchQuery) {
+   /*  if (searchQuery) {
       const query = searchQuery.toLowerCase()
       result = result.filter(
         (product) =>
@@ -261,9 +74,9 @@ export default function ProductosPage() {
           product.tags.some((tag) => tag.toLowerCase().includes(query)),
       )
     }
-
+ */
     // Ordenar productos
-    switch (sortOption) {
+    /* switch (sortOption) {
       case "price-low":
         result = [...result].sort((a, b) => {
           const priceA = a.discountPrice || a.price
@@ -288,7 +101,7 @@ export default function ProductosPage() {
       default:
         result = [...result].sort((a, b) => (a.isFeatured ? -1 : b.isFeatured ? 1 : 0))
         break
-    }
+    } */
 
     setFilteredProducts(result)
   }, [selectedCategory, searchQuery, sortOption])
@@ -339,7 +152,7 @@ export default function ProductosPage() {
               ))}
             </div>
 
-            <div className="flex flex-col gap-2 sm:flex-row">
+          {/*   <div className="flex flex-col gap-2 sm:flex-row">
               <div className="relative">
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 <Input
@@ -367,7 +180,7 @@ export default function ProductosPage() {
                   <DropdownMenuItem onClick={() => setSortOption("newest")}>Más Recientes</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -406,11 +219,11 @@ export default function ProductosPage() {
                     </div>
                   </div>
                   <CardContent className="p-4">
-                    <div className="mb-2">{renderRatingStars(product.rating)}</div>
+                  {/*   <div className="mb-2">{renderRatingStars(product.rating)}</div> */}
                     <CardTitle className="line-clamp-1">{product.name}</CardTitle>
                     <CardDescription className="mt-2 line-clamp-2">{product.description}</CardDescription>
                     <div className="mt-3 flex items-center">
-                      {product.discountPrice ? (
+                     {/*  {product.discountPrice ? (
                         <>
                           <span className="text-lg font-bold text-primary">${product.discountPrice.toFixed(2)}</span>
                           <span className="ml-2 text-sm line-through text-muted-foreground">
@@ -421,18 +234,24 @@ export default function ProductosPage() {
                           </Badge>
                         </>
                       ) : (
-                        <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
-                      )}
+                   
+                      )} */}
+                           <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
+                           {product.category === "lambrin" || product.category==='piedras' ?
+                           <span className="ml-2 text-sm  text-muted-foreground">
+                            ${product?.boxPrice?.toFixed(2)} por caja con {product?.boxQuantity} piezas
+                          </span> : null}
+
                     </div>
                   </CardContent>
                   <CardFooter className="p-4 pt-0 flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">
+                    {/* <span className="text-sm text-muted-foreground">
                       {product.stock > 10
                         ? "En stock"
                         : product.stock > 0
                           ? `¡Solo ${product.stock} disponibles!`
                           : "Agotado"}
-                    </span>
+                    </span> */}
                     <ProductDetailModal product={product} />
                   </CardFooter>
                 </Card>
