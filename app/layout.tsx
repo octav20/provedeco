@@ -8,9 +8,13 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "MiEmpresa - Tu Solución Confiable",
+  title: "Provedeco - Tu Solución Confiable",
   description: "Ofrecemos los mejores productos con la más alta calidad para satisfacer todas tus necesidades.",
-    generator: 'v0.dev'
+  icons: {
+    icon: "/logo/logo.png",
+    shortcut: "/logo/logo.png",
+    apple: "/logo/logo.png",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
