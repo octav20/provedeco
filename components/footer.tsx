@@ -3,6 +3,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, A
 import { Button } from "@/components/ui/button"
 import { businessData } from "@/data/business"
 import Image from "next/image"
+import { sellersData } from "@/data/sellers"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -53,10 +54,10 @@ export default function Footer() {
                 <Image src={'/logo/logo.png'} width={100} height={50} alt="Logo" className="" />
               </Link>
               <p className="mt-4 text-muted-foreground">
-                Ofreciendo productos de calidad desde 2010. Nuestra misión es proporcionar soluciones innovadoras y
-                confiables para nuestros clientes.
+                
+                {businessData.description}
               </p>
-              <div className="mt-6 flex space-x-4">
+             {/*  <div className="mt-6 flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
@@ -69,7 +70,7 @@ export default function Footer() {
                     {social.icon}
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}
@@ -81,11 +82,11 @@ export default function Footer() {
                     Inicio
                   </Link>
                 </li>
-                <li>
+             {/*    <li>
                   <Link href="/about" className="text-muted-foreground transition-colors hover:text-primary">
                     Nosotros
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/productos" className="text-muted-foreground transition-colors hover:text-primary">
                     Productos
@@ -132,23 +133,22 @@ export default function Footer() {
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start">
                   <MapPin className="mr-2 h-5 w-5 text-primary" />
-                  <span className="text-muted-foreground">Calle Principal 123, Ciudad, País</span>
+                  <span className="text-muted-foreground">{businessData.address}</span>
                 </li>
-                <li className="flex items-center">
-                  <Phone className="mr-2 h-5 w-5 text-primary" />
-                  <a href="tel:+34123456789" className="text-muted-foreground transition-colors hover:text-primary">
-                    +34 123 456 789
-                  </a>
+                {sellersData.map((seller, index) => (
+                <li className="flex flex-col " key={index}>
+                  <h4 className="text-lg mb-3 ">{seller.name} Provedeco</h4>
+                <div className="flex flex-row">
+                      <Phone key={index} className="mr-2 h-5 w-5 text-primary" />
+                      <a
+                        href={`tel:${seller.number}`}
+                        className="text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {seller.number}
+                      </a>
+                </div>
                 </li>
-                <li className="flex items-center">
-                  <Mail className="mr-2 h-5 w-5 text-primary" />
-                  <a
-                    href="mailto:info@miempresa.com"
-                    className="text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    info@miempresa.com
-                  </a>
-                </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function Footer() {
             &copy; {currentYear} {businessData.name}. Todos los derechos reservados.
           </p>
           <div className="flex items-center space-x-4">
-            <Link href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">
+            <Link href="/contacto" className="text-sm text-muted-foreground transition-colors hover:text-primary">
               Mapa del Sitio
             </Link>
            {/*  <span className="text-muted-foreground">|</span>

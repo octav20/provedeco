@@ -32,7 +32,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
   const menuItems = [
     { href: "/", label: "Inicio", icon: <Home className="h-5 w-5" /> },
-    { href: "/about", label: "Nosotros", icon: <Users className="h-5 w-5" /> },
+/*     { href: "/about", label: "Nosotros", icon: <Users className="h-5 w-5" /> }, */
     { href: "/productos", label: "Productos", icon: <ShoppingBag className="h-5 w-5" /> },
     { href: "/contacto", label: "Contacto", icon: <Mail className="h-5 w-5" /> },
   ]

@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin, You
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { sellersData } from "@/data/sellers"
+import { businessData } from "@/data/business"
 
 export default function ContactoPage() {
   const socialNetworks = [
@@ -55,7 +56,7 @@ export default function ContactoPage() {
               <CardContent className="p-0">
                 <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4307.03039314846!2d-107.38586456323875!3d24.80345580460266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bcd0b2e05fa1b5%3A0x3ad749767126663c!2sPanteon%20Civil!5e0!3m2!1ses!2smx!4v1746394578332!5m2!1ses!2smx"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14485.870198191014!2d-107.3776743452427!3d24.81367953067675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bcd756929e435b%3A0x1d99b8adace81e6!2sBlvrd%20Dr%20Mora%201218%2C%20Las%20Quintas%2C%2080060%20Culiac%C3%A1n%20Rosales%2C%20Sin.!5e0!3m2!1ses-419!2smx!4v1746401483776!5m2!1ses-419!2smx"
                     width="100%"
                     height="100%"
                     style={{ border: 0, aspectRatio: "16/9" }}
@@ -64,7 +65,7 @@ export default function ContactoPage() {
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Ubicación de la empresa"
                   ></iframe>
-                  </div>
+                 </div>
               </CardContent>
             </Card>
 
@@ -104,7 +105,7 @@ export default function ContactoPage() {
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold">Dirección</h3>
-                    <p>Calle Principal 123, Ciudad, País</p>
+                    <p>{businessData.address}</p>
                   </div>
                 </CardContent>
               </Card>

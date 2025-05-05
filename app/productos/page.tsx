@@ -46,6 +46,7 @@ export default function ProductosPage() {
     {id: "placas", name: "Placas"},
     {id:'lambrin', name: "Lambrin"},
     {id:'piedras', name: "Piedras"},
+    {id:'muebles', name: "Muebles"},
   ]
 
   // Datos de ejemplo para los productos
@@ -236,7 +237,11 @@ export default function ProductosPage() {
                       ) : (
                    
                       )} */}
-                           <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
+                      {product.category === 'muebles' ?
+                        <span className="text-lg font-bold"> Desde ${product.price.toFixed(2)}</span>:  <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
+                    }
+                         
+
                            {product.category === "lambrin" || product.category==='piedras' ?
                            <span className="ml-2 text-sm  text-muted-foreground">
                             ${product?.boxPrice?.toFixed(2)} por caja con {product?.boxQuantity} piezas

@@ -57,10 +57,10 @@ export default function Header() {
             Inicio
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary relative group">
+        {/*   <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary relative group">
             Nosotros
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+          </Link> */}
           <Link href="/productos" className="text-sm font-medium transition-colors hover:text-primary relative group">
             Productos
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>

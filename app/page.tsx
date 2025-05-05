@@ -40,7 +40,7 @@ export default function HomePage() {
                   </Button>
                 </Link>
               </div>
-              <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+           {/*    <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <CheckCircle className="h-4 w-4 text-primary" />
                   <span>Envío gratuito</span>
@@ -53,14 +53,14 @@ export default function HomePage() {
                   <CheckCircle className="h-4 w-4 text-primary" />
                   <span>Soporte 24/7</span>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="flex items-center justify-center lg:justify-end">
               <div className="relative">
                {/*  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/20 to-primary/40 opacity-75 blur-xl"></div>
                 */} <div className="relative overflow-hidden rounded-2xl border bg-background p-2 shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=550&width=550"
+                    src="/envio.jpeg"
                     width={330}
                     height={330}
                     alt="Hero Image"

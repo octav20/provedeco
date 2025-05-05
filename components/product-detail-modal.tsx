@@ -25,6 +25,7 @@ interface ProductDetailModalProps {
     rating?: number
     description: string
     category: string
+    dimensions?: string
     tags?: string[]
     isNew?: boolean
     isFeatured?: boolean
@@ -152,7 +153,7 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
           <div className="space-y-6">
             <div>
               <div className="flex items-start justify-between">
-                <h3 className="text-2xl font-bold">{product.name}</h3>
+                <h3 className="text-2xl font-bold">{product.name} {product.dimensions}</h3>
                 {/* <div className="flex gap-1">
                   <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full">
                     <Heart className="h-4 w-4" />
@@ -178,8 +179,8 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
                   <span className="text-3xl font-bold">${product.price.toFixed(2)}</span>
                 )}
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">Impuestos incluidos. Envío calculado en el checkout.</p>
-            </div>
+           {/*    <p className="mt-2 text-sm text-muted-foreground">Impuestos incluidos. Envío calculado en el checkout.</p>
+            */} </div>
 
             {/* <div className="space-y-4">
               <div>

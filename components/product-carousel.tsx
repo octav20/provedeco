@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { instalaciones } from "@/data/products"
 
 interface CarouselItem {
   id: number
@@ -17,7 +18,7 @@ export default function ProductCarousel() {
   const [current, setCurrent] = useState(0)
   const [autoplay, setAutoplay] = useState(true)
 
-  const carouselItems: CarouselItem[] = [
+  /* const carouselItems: CarouselItem[] = [
     {
       id: 1,
       title: "Producto Destacado 1",
@@ -39,7 +40,8 @@ export default function ProductCarousel() {
       price: 79.99,
       image: "/placeholder.svg?height=500&width=1200&text=Producto+Destacado+3",
     },
-  ]
+  ] */
+  const carouselItems = instalaciones
 
   const next = () => {
     setCurrent((current + 1) % carouselItems.length)
@@ -81,12 +83,12 @@ export default function ProductCarousel() {
         {carouselItems.map((item) => (
           <div key={item.id} className="relative w-full flex-shrink-0">
             <div className="relative aspect-[21/9] w-full">
-              <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" priority />
+              <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" priority />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-center p-8 text-white">
-                <h2 className="text-3xl font-bold mb-2">{item.title}</h2>
-                <p className="text-xl mb-4 max-w-md">{item.description}</p>
-                <p className="text-2xl font-bold mb-6">${item.price.toFixed(2)}</p>
-                <Button className="w-fit">Ver Oferta</Button>
+               {/*  <h2 className="text-3xl font-bold mb-2">{item.name}</h2> */}
+      {/*           <p className="text-xl mb-4 max-w-md">{item.description}</p> */}
+            {/*     <p className="text-2xl font-bold mb-6">${item.price.toFixed(2)}</p> */}
+       {/*          <Button className="w-fit">Ver Oferta</Button> */}
               </div>
             </div>
           </div>

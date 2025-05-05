@@ -226,4 +226,51 @@ export const products = [
     boxQuantity: 14,
     images: ['/products/piedras/piedra-4.jpeg'],
   },
+
+  /* Muebles */
+  {
+    id: 21,
+    name: 'Mueble de TV',
+    description:
+      'Muebles de TV con iluminación led de la mayor calidad y durabilidad del mercado',
+    category: 'muebles',
+    price: 6500,
+    images: ['/products/muebles/mueble-1.jpeg'],
+  },
+  {
+    id: 22,
+    name: 'Muebles de Melamina de alto brillo',
+    description:
+      'Muebles de melamina de alto brillo resistente al agua y a cualquier plaga es la mayor calidad en este material con una durabilidad de por vida',
+    category: 'muebles',
+    price: 6500,
+    images: ['/products/muebles/mueble-2.jpeg'],
+  },
+];
+
+export const instalaciones = [
+  {
+    id: 1,
+    name: 'Instalación de Lambrin',
+    description: 'Instalación de Lambrin de interior',
+    image: '/instalaciones/instalacion-1.jpeg',
+  },
+  {
+    id: 2,
+    name: 'Instalación de Lambrin',
+    description: 'Instalación de Lambrin de interior',
+    image: '/instalaciones/instalacion-2.jpeg',
+  },
+  {
+    id: 3,
+    name: 'Instalación de Lambrin',
+    description: 'Instalación de Lambrin de interior',
+    image: '/instalaciones/instalacion-3.jpeg',
+  },
+  {
+    id: 4,
+    name: 'Instalación de Lambrin',
+    description: 'Instalación de Lambrin de interior',
+    image: '/instalaciones/instalacion-4.jpeg',
+  },
 ];
