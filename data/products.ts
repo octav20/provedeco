@@ -167,7 +167,6 @@ export const products = [
       '/products/lambrin/lambrin-4.jpeg',
       '/products/lambrin/lambrin-5.jpeg',
       '/products/lambrin/lambrin-6.jpeg',
-      '/products/lambrin/lambrin-7.jpeg',
       '/products/lambrin/lambrin-8.jpeg',
       '/products/lambrin/lambrin-9.jpeg',
       '/products/lambrin/lambrin-10.jpeg',
