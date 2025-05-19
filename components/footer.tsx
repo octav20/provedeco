@@ -51,7 +51,7 @@ export default function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <Link href="/" className="text-2xl font-bold">
-                <Image src={'/logo/logo.png'} width={100} height={50} alt="Logo" className="" />
+                <Image src={'/logo/logo.webp'} width={100} height={50} alt="Logo" className="" />
               </Link>
               <p className="mt-4 text-muted-foreground">
                 

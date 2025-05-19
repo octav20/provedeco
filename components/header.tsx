@@ -47,7 +47,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="text-xl font-bold flex items-center">
        {/*      <span className="text-primary mr-1">Mi</span>Empresa */}
-          <Image src={'/logo/logo.png'} width={100} height={50} alt="Logo" className="" />
+          <Image src={'/logo/logo.webp'} width={100} height={50} alt="Logo" className="" />
 
           </Link>
 

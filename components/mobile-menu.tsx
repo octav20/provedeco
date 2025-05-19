@@ -54,7 +54,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-bold" onClick={onClose}>
   {/*             <span className="text-primary">Mi</span>Empresa */}
-              <Image src={'/logo/logo.png'} width={100} height={50} alt="Logo" className="" />
+              <Image src={'/logo/logo.webp'} width={100} height={50} alt="Logo" className="" />
             </Link>
             <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full hover:bg-primary/10">
               <X className="h-6 w-6" />

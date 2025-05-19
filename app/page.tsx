@@ -60,7 +60,7 @@ export default function HomePage() {
                {/*  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/20 to-primary/40 opacity-75 blur-xl"></div>
                 */} <div className="relative overflow-hidden rounded-2xl border bg-background p-2 shadow-xl">
                   <Image
-                    src="/envio.jpeg"
+                    src="/envio.webp"
                     width={330}
                     height={330}
                     alt="Hero Image"

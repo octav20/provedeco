@@ -7,7 +7,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 900,
-    images: ['/products/placas/product-1.jpeg'],
+    images: ['/products/placas/product-1.webp'],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1000,
-    images: ['/products/placas/product-2.jpeg'],
+    images: ['/products/placas/product-2.webp'],
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1000,
-    images: ['/products/placas/product-3.jpeg'],
+    images: ['/products/placas/product-3.webp'],
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1100,
-    images: ['/products/placas/product-4.jpeg'],
+    images: ['/products/placas/product-4.webp'],
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1100,
-    images: ['/products/placas/product-5.jpeg'],
+    images: ['/products/placas/product-5.webp'],
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1100,
-    images: ['/products/placas/product-6.jpeg'],
+    images: ['/products/placas/product-6.webp'],
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-7.jpeg'],
+    images: ['/products/placas/product-7.webp'],
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-8.jpeg'],
+    images: ['/products/placas/product-8.webp'],
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-9.jpeg'],
+    images: ['/products/placas/product-9.webp'],
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-10.jpeg'],
+    images: ['/products/placas/product-10.webp'],
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-11.jpeg'],
+    images: ['/products/placas/product-11.webp'],
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-12.jpeg'],
+    images: ['/products/placas/product-12.webp'],
   },
   {
     id: 13,
@@ -127,7 +127,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-13.jpeg'],
+    images: ['/products/placas/product-13.webp'],
   },
   {
     id: 14,
@@ -137,7 +137,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-14.jpeg'],
+    images: ['/products/placas/product-14.webp'],
   },
   {
     id: 15,
@@ -147,7 +147,7 @@ export const products = [
     dimensions: '1.22M x 2.44m x 3mm',
     category: 'placas',
     price: 1200,
-    images: ['/products/placas/product-15.jpeg'],
+    images: ['/products/placas/product-15.webp'],
   },
   /* Lambrin */
   {
@@ -161,17 +161,17 @@ export const products = [
     boxPrice: 2600,
     boxQuantity: 14,
     images: [
-      '/products/lambrin/lambrin-1.jpeg',
-      '/products/lambrin/lambrin-2.jpeg',
-      '/products/lambrin/lambrin-3.jpeg',
-      '/products/lambrin/lambrin-4.jpeg',
-      '/products/lambrin/lambrin-5.jpeg',
-      '/products/lambrin/lambrin-6.jpeg',
-      '/products/lambrin/lambrin-8.jpeg',
-      '/products/lambrin/lambrin-9.jpeg',
-      '/products/lambrin/lambrin-10.jpeg',
-      '/products/lambrin/lambrin-11.jpeg',
-      '/products/lambrin/lambrin-12.jpeg',
+      '/products/lambrin/lambrin-1.webp',
+      '/products/lambrin/lambrin-2.webp',
+      '/products/lambrin/lambrin-3.webp',
+      '/products/lambrin/lambrin-4.webp',
+      '/products/lambrin/lambrin-5.webp',
+      '/products/lambrin/lambrin-6.webp',
+      '/products/lambrin/lambrin-8.webp',
+      '/products/lambrin/lambrin-9.webp',
+      '/products/lambrin/lambrin-10.webp',
+      '/products/lambrin/lambrin-11.webp',
+      '/products/lambrin/lambrin-12.webp',
     ],
   },
 
@@ -186,7 +186,7 @@ export const products = [
     price: 500,
     boxPrice: 6600,
     boxQuantity: 14,
-    images: ['/products/piedras/piedra-1.jpeg'],
+    images: ['/products/piedras/piedra-1.webp'],
   },
   {
     id: 18,
@@ -198,7 +198,7 @@ export const products = [
     price: 500,
     boxPrice: 6600,
     boxQuantity: 14,
-    images: ['/products/piedras/piedra-2.jpeg'],
+    images: ['/products/piedras/piedra-2.webp'],
   },
 
   {
@@ -211,7 +211,7 @@ export const products = [
     price: 500,
     boxPrice: 6600,
     boxQuantity: 14,
-    images: ['/products/piedras/piedra-3.jpeg'],
+    images: ['/products/piedras/piedra-3.webp'],
   },
   {
     id: 20,
@@ -223,7 +223,7 @@ export const products = [
     price: 500,
     boxPrice: 6600,
     boxQuantity: 14,
-    images: ['/products/piedras/piedra-4.jpeg'],
+    images: ['/products/piedras/piedra-4.webp'],
   },
 
   /* Muebles */
@@ -234,7 +234,7 @@ export const products = [
       'Muebles de TV con iluminación led de la mayor calidad y durabilidad del mercado',
     category: 'muebles',
     price: 6500,
-    images: ['/products/muebles/mueble-1.jpeg'],
+    images: ['/products/muebles/mueble-1.webp'],
   },
   {
     id: 22,
@@ -243,7 +243,7 @@ export const products = [
       'Muebles de melamina de alto brillo resistente al agua y a cualquier plaga es la mayor calidad en este material con una durabilidad de por vida',
     category: 'muebles',
     price: 6500,
-    images: ['/products/muebles/mueble-2.jpeg'],
+    images: ['/products/muebles/mueble-2.webp'],
   },
 ];
 
@@ -252,24 +252,24 @@ export const instalaciones = [
     id: 1,
     name: 'Instalación de Lambrin',
     description: 'Instalación de Lambrin de interior',
-    image: '/instalaciones/instalacion-1.jpeg',
+    image: '/instalaciones/instalacion-1.webp',
   },
   {
     id: 2,
     name: 'Instalación de Lambrin',
     description: 'Instalación de Lambrin de interior',
-    image: '/instalaciones/instalacion-2.jpeg',
+    image: '/instalaciones/instalacion-2.webp',
   },
   {
     id: 3,
     name: 'Instalación de Lambrin',
     description: 'Instalación de Lambrin de interior',
-    image: '/instalaciones/instalacion-3.jpeg',
+    image: '/instalaciones/instalacion-3.webp',
   },
   {
     id: 4,
     name: 'Instalación de Lambrin',
     description: 'Instalación de Lambrin de interior',
-    image: '/instalaciones/instalacion-4.jpeg',
+    image: '/instalaciones/instalacion-4.webp',
   },
 ];

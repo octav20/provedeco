@@ -12,9 +12,9 @@ export const metadata = {
   title: "Provedeco - Tu Solución Confiable",
   description: "Ofrecemos los mejores productos con la más alta calidad para satisfacer todas tus necesidades.",
   icons: {
-    icon: "/logo/logo.png",
-    shortcut: "/logo/logo.png",
-    apple: "/logo/logo.png",
+    icon: "/logo/logo.webp",
+    shortcut: "/logo/logo.webp",
+    apple: "/logo/logo.webp",
   },
 }
 
